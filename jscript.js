@@ -1,11 +1,11 @@
 console.log("hello")
-var taskList = []
+var tasks = []
 
-var task = {
+/*var task = {
   "description": "",
   "difficulty": "",
   "person": ""
-}
+}*/
 function drawList() {
   // Select #list-container element from HTML
   var parent = document.getElementById("list-container")
@@ -13,14 +13,11 @@ function drawList() {
   parent.innerHTML = ""
   // Create a <ul> node
   var ul = document.createElement("ul")
-  for(var i =0; i<taskList.length; i++){
-    console.log(taskList[i].description)
-    console.log(taskList[i].difficulty)
-    console.log(taskList[i].person)
+  for(var i =0; i<tasks.length; i++){
     // Create an <li> node
     var li = document.createElement("li")
     // Add the roof string to the li
-    li.innerHTML = taskList[i].person + " will " + taskList[i].description + " (" + taskList[i].difficulty + ")"
+    li.innerHTML = tasks[i].person + " will: " + tasks[i].description + " (" + tasks[i].difficulty + ")"
     // Append li to ul
     ul.appendChild(li)
   }
@@ -39,7 +36,7 @@ function addInfo(){
     person: form.person.value,
   }
   // Insert new task object into taskList array
-  taskList.push(newTask)
+  tasks.push(newTask)
   // Trigger printing the list to page
   drawList();
 }
