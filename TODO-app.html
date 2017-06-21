@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TODO APP</title>
+    <script src="jscript.js"></script>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      form {
+        margin-left: 5%;
+        padding: 1rem;
+        border: 1px gray solid;
+        width: 90%;
+      }
+      label:after {
+        content: "";
+        display: table;
+        margin-bottom: 1rem;
+      }
+      img {
+        margin-left: 5%;
+        width: 90%;
+      }
+      @media(min-width: 700px){
+        form {
+          width: 40%;
+          float: left;
+        }
+        img {
+          width: 40%;
+          float: right;
+          margin-right: 5%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>My TODO List</h1>
+    <p>Houses!</p>
+    <p>They're all different.</p>
+
+    <div id="list-container"></div>
+
+    <div id="parent"></div>
+
+    <img src="http://rilane.com/images/2016148/cool-dog-house-with-roofdeck.jpg" alt="bulldog standing atop very cool doghouse">
+
+    <form name="task-assigment">
+      <label> Task Description:
+        <input type="text" name="taskDesc">
+      </label>
+      <label> Task Difficulty
+        <select id="difficulty">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Person</legend>
+        <label>
+          <input type="radio" name="person" value="Sijan">Sijan
+          <input type="radio" name="person" value="Alexander">Alexander
+          <input type="radio" name="person" value="Christopher">Christopher
+        </label>
+      </fieldset>
+      <input type="submit">
+    </form>
+
+  </body>
+</html>
